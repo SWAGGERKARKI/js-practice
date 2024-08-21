@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>functions</title>
+</head>
+<body>
+  <script>
+    // function declaration
+    // function: reuse of block of code throughout application
+    /* function function1() {
+      console.log(1);
+      console.log(4 + 5);
+      console.log('Sagar');
+      function function2() {
+        console.log('Karki');
+      }
+      function2();
+    }
+
+    // function calling
+    function1(); */
+
+    // function with parameters
+    function taxCalculate(parameter1, taxPercent = 0.1) {
+      console.log(parameter1 * taxPercent);
+    }
+
+    // to call function with parameters, arguments should be passed while calling function
+    taxCalculate(2000, 0.5);
+    // if required argument not passed then function does not return desired result
+    // to avoid such error, default parameter can be added which gives default value if user did not give
+    taxCalculate(5000);
+    
+  </script>
+</body>
+</html>

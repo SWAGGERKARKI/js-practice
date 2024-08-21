@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08-Objects</title>
+</head>
+<body>
+  <script>
+    /* const details = {
+      name : 'Sagar',
+      age : 30
+    }
+
+    // object allows to group multiple values together
+    // access whole object
+    console.log(details);
+    // access properties of object by dot notation
+    console.log(details.name);
+    console.log(details.age);
+    // access properties of object by bracket notation
+    console.log(details['name']);
+    console.log(details['age']);
+    // adding the new property of object using dot notation
+    details.newProperty = true;
+    console.log(details);
+    // adding the other property of object using bracket notation
+    details['otherProperty'] = 8.9;
+    console.log(details);
+    // delete the new property of object using delete keyword and dot notation
+    delete details.newProperty;
+    // delete the other property of object using delete keyword and bracket notation
+    delete details['otherProperty'];
+    console.log(details);
+    // object makes our code more organized */
+
+    /* const product = {
+      name: 'shirt',
+      'delivery-time': '1 day',
+      rating: {
+        stars: 4.5,
+        count: 2
+      },
+      fn: function function1() {
+        console.log(`This is function within function`);
+      }
+    }
+
+    // dot notation
+    console.log(product.name);
+    console.log(product['name']);
+    // bracket notation
+    // one the uses of bracket notation when dot notation not work
+    console.log(product['name']);
+    console.log(product['delivery-time']);
+    // to access object within object
+    console.log(product.rating);
+    console.log(product.rating.count);
+    console.log(product.rating['count']);
+    // to access function witin object: method
+    product.fn();
+
+    // conversion
+    // JS object to JSON
+    const productString = JSON.stringify(product);
+    console.log(productString);
+    // back to JS Object
+    console.log(JSON.parse(productString));
+
+    // built-in storage: JSON (temp) and localStorage (permanent)
+    // only supports string
+    // localStorage.setItem('message', 'hello');
+    localStorage.setItem('product', productString);
+    // to acess it
+    localStorage.removeItem('message');
+    console.log(localStorage.getItem('message'));
+    console.log(localStorage.getItem('product')); */
+
+    /* // Auto-Boxing
+    // automatically wraps a string in an object
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+    // object points to reference of that data
+    const object1 = {
+      name: 'Sagar'
+    }
+
+    // not exactly copy the data but the reference
+    // it is copy of reference
+    const object2 = object1;
+
+    const object3 = {
+      name: 'Sagar'
+    }
+
+    console.log(object1);
+    console.log(object2);
+    console.log(object3);
+    console.log(object1 === object2);
+    console.log(object3 === object2);
+    console.log(object3 === object1);
+
+    object1.name = 'Sanjog';
+    object3.name = 'Sanjog';
+    console.log(object1);
+    console.log(object2);
+    console.log(object3);
+    console.log(object1 === object2);
+    console.log(object1 === object3);
+    console.log(object3 === object2); */
+
+    // Destructure
+    // access object property and assing it in variable of same name as property
+    object4 = {
+      name: 'Sanjog',
+      age: 28
+    }
+
+    console.log(object4.name);
+    const nameObj = object4.name;
+    console.log(nameObj);
+    const { name, age } = object4; // Destructuring
+    console.log(name);
+    console.log(age);
+
+    object5 = {
+      name,
+      // method: function function1() {
+      //   console.log('This is a method');
+      // }
+      method() {
+        console.log('This is method');
+      }
+    }
+
+    console.log(object5.name);
+    object5.method();
+  </script>
+</body>
+</html>

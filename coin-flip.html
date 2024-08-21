@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Flip</title>
+</head>
+<body>
+  <p>Cart Quantity</p>
+  <button onclick="
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Show Quantity</button>
+
+  <button onclick="
+    // cartQuantity = cartQuantity + 1;
+    cartQuantity ++;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Add to cart</button>
+
+  <button onclick="
+    cartQuantity = cartQuantity + 2;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+2</button>
+
+  <button onclick="
+    if (cartQuantity <= 10) {
+      cartQuantity += 3;
+      if (cartQuantity > 10) {
+        cartQuantity -= 3;
+        console.log(`Cart is full`);
+      }
+    }
+    console.log(`Cart Quanitity: ${cartQuantity}`);
+  ">+3</button>
+
+  <button onclick="
+    if (cartQuantity <= 10) {
+      cartQuantity += 4;
+      if (cartQuantity > 10) {
+        cartQuantity -= 4;
+        alert(`Cart is full`);
+      }
+      console.log(`Cart Quantity: ${cartQuantity}`);
+    }
+  ">+4</button>
+
+  <button onclick="
+      // if (cartQuantity > 10) {
+      //   alert(`Cart is out of storage.`);
+      //   console.log(`Cart Quantity: ${cartQuantity}`);
+      // } else {
+      //   cartQuantity += 5;
+      //   console.log(`Cart Quantity: ${cartQuantity}`);
+      // }
+
+      if (cartQuantity <= 10) {
+        cartQuantity += 5;
+        if (cartQuantity > 10) {
+          alert(`Cart is full`);
+          cartQuantity -= 5;
+        }
+        console.log(`Cart Quantity: ${cartQuantity}`);
+      }
+
+      // cartQuantity <= 10 ? cartQuantity += 5 : alert(`Cart is full`);
+      // (cartQuantity += 5) > 10 ? ((cartQuantity -= 5) < 10) ? alert(`Cart is full`) : cartQuantity;
+      // console.log(`Cart Quantity: ${cartQuantity}`);
+  ">+5</button>
+
+  <button onclick="
+    // cartQuantity = cartQuantity - 1;
+    cartQuantity > 0 ? ((cartQuantity --) < 0 ? alert(`Not enough items in the cart`) : cartQuantity ): alert(`Not enough items in the cart`);
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Remove from cart</button>
+
+  <button onclick="
+    // cartQuantity = cartQuantity - 2;
+    cartQuantity >= 2 ? cartQuantity -= 2 : 0;
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">-2</button>
+
+  <button onclick="
+    cartQuantity = 0;
+    console.log(`Cart was reset.`);
+    console.log(`Cart Quantity: ${cartQuantity}`);
+  ">Reset</button>
+
+  <script>
+    let cartQuantity = 0;
+    let remQuantity = 0;
+    const randomNumber = Math.random();
+    console.log(randomNumber);
+
+    let result = '';
+    let guess = 'tails';
+
+    if (randomNumber < 0.5) {
+      result = 'heads';
+    } else {
+      result = 'tails';
+    }
+
+    console.log(result);
+
+    // if (result === guess) {
+    //   console.log('You win.');
+    // } else {
+    //   console.log('You lose.');
+    // }
+
+    // by using ternary opertor insted of if-else statement
+    const show = result === guess ? 'You win.' : 'You lose.';
+    console.log(show);
+
+    const message = cartQuantity > 10 ? 'Cart is full' : 'Space avilable';
+    console.log(message);
+  </script>
+</body>
+</html>

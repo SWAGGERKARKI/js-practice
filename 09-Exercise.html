@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09-Exercise</title>
+</head>
+<body>
+  <!--<button>9a</button>
+  <button class="secondButton">9b</button>-->
+
+  <!--<button onclick="
+    showResult('heads');
+  ">heads</button>
+
+  <button onclick="
+    showResult('tails');
+  ">tails</button>
+  <p class="js-result"></p>-->
+
+  <input type="text" placeholder="Name" class="js-name-field" onkeydown="
+    handleNameKeyDown();
+  ">
+  <button onclick="
+    showName();
+  ">Submit</button>
+  <p class="js-name-display"></p>
+
+
+
+  <script>
+    function handleNameKeyDown() {
+      if (event.key === 'Enter') {
+      showName();
+    }
+    }
+
+    function showName() {
+      const inputElement = document.querySelector('.js-name-field');
+      document.querySelector('.js-name-display')
+        .innerHTML = `Your name is: ${inputElement.value}`;
+      console.log(inputElement.value);
+    }
+
+    /*
+    function showResult(userMove) {
+      const resultElement = document.querySelector('.js-result');
+      resultElement.innerHTML = `You chose: ${userMove}`;
+      console.log(resultElement.innerHTML);
+      }
+      */
+    
+
+    /*
+    const buttonElement = document.querySelector('button');
+    console.log(buttonElement.innerHTML);
+
+    const secondButtonElement = document.querySelector('.secondButton');
+    secondButtonElement.innerHTML = '9b done!'
+    console.log(secondButtonElement.innerHTML);
+    */
+
+    /*
+    document.body.innerHTML = 'This is test for innerHTML';
+    document.title = 'Job done!';
+    */
+
+  </script>
+</body>
+</html>
