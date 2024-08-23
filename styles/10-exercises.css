@@ -1,0 +1,36 @@
+.amazon-button {
+  font-size: 16px;
+  /* font-weight: bold; */
+  background-color: rgba(255, 216, 20);
+  border: none;
+  padding: 10px 60px;
+  border-radius: 30px;
+}
+
+.uber-button {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.one {
+  background-color: black;
+  color: rgb(230, 230, 230);
+}
+
+.gaming-button {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.is-toggled {
+  background-color: white;
+  color: black;
+}
