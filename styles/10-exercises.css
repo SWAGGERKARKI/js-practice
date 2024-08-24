@@ -56,3 +56,28 @@ body {
 .cost-display {
   color: red;
 }
+
+.calculator-buttons {
+  font-size: 30px;
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border: none;
+  height: 70px;
+  width: 70px;
+  border-radius: 60px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+
+.calculation-sign {
+  background-color: orange;
+}
+
+.clear {
+  font-size: 18px;
+}
+
+.calculator-display {
+  font-size: 40px;
+  margin: 0;
+}

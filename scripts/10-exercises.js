@@ -107,3 +107,48 @@ function calculateAmazonCost() {
     showCostElement.classList.add("cost-display");
   }
 }
+
+// 10i modification to calculator project
+
+let calculation = localStorage.getItem("calculate") || "";
+let result = 0;
+
+console.log(calculation);
+
+function updateCalculation(value) {
+  if (!result) {
+    calculation += value;
+  } else {
+    result += value;
+  }
+
+  console.log(`Calculation: ${calculation}`);
+  console.log("result", result);
+
+  localStorage.setItem("calculate", calculation);
+
+  calculatorNumberDisplay();
+}
+
+function calculate(calculation) {
+  if (!result) {
+    result = eval(calculation);
+  } else {
+    result = eval(result);
+  }
+
+  const displayElement = document.querySelector(".js-calculator-display");
+  console.log(`Calculation: ${calculation} = ${result}`);
+
+  displayElement.innerHTML = `${result}`;
+  return result;
+}
+
+function calculatorNumberDisplay() {
+  const displayElement = document.querySelector(".js-calculator-display");
+  if (result) {
+    displayElement.innerHTML = `${result}`;
+  } else {
+    displayElement.innerHTML = `${calculation}`;
+  }
+}
