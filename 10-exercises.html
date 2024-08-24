@@ -27,16 +27,35 @@
 
   <!-- 10d -->
   <button onclick="
-    gamingButtonOnOff();
+    // 10d & 10e
+    // gamingButtonOnOff();
+    // 10g
+    gamingOneButtonOnOff();
   " class="js-gaming-button gaming-button">Gaming</button>
 
   <button onclick="
-    musicButtonOnOff();
+    // 10d & 10e
+    musicOneButtonOnOff();
+    // 10g
+    // oneButtonOnOff();
   " class="js-music-button gaming-button">Music</button>
 
   <button onclick="
-    techButtonOnOff();
+    // 10d & 10e
+    techOneButtonOnOff();
+    // 10g
+    // oneButtonOnOff();
   " class="js-tech-button gaming-button">Tech</button>
+
+  <!-- 10h -->
+  <p>Amazon Shipping Calculator</p>
+  <p>Shop above $40 = FREE shipping</p>
+  <p>Shop below $40 = +10% shipping</p>
+  <input type="text" placeholder="Cost of order" class="js-input input-cost">
+  <button onclick="
+    calculateAmazonCost();
+  " class="calculate-button">Calculate</button>
+  <p class="js-cost"></p>
 
   <script src="scripts/10-exercises.js"></script>
 
