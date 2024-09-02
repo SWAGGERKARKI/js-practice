@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+
+<body>
+  <script>
+    /*
+    // Function: Block of code reused throughout applications
+    // advantage: better reusability of code, better readability
+    function greetings() {
+      console.log('hello');
+    }
+
+    greetings();
+    */
+
+    /*
+    // functions are value in JS
+    const num = 2;
+    console.log(num);
+    // functions can be stored in variable
+    const greet = function () {
+      console.log('hello2');
+    }
+    // though function stored in variable, we can call the variable as function
+    greet();
+    // if we remove the function name greeting, then it will be called anonymous function or nameless function
+    */
+
+    /*
+    // functions can be stored in the object as well
+    const studentObj = {
+      name: 'Pritvi',
+      age: 23,
+      fun: function () {
+        console.log('hello3');
+      }
+    };
+    // to execute the function inside object we just use dot notation
+    studentObj.fun();
+    // function name greetings can be removed
+    */
+
+    /*
+    // function can be passed as argument
+    function display(param) {
+      param();
+    }
+    display(function () {
+      console.log('hello4');
+    });
+    // the function we used as argumnet is called callback function
+
+    // advantage of normal function
+    // easier to read & hoisting
+    // hoisting: function declare and call can be written in any order
+    // but in anonymous function hoisting is not allowed
+    /*
+
+    /*
+    // built-in functions
+    // setTimeout() & setInterval()
+    // setTimeout(): takes two arguments
+    // 1st: callback function
+    // 2nd: time in miliseconds
+    setTimeout(function () {
+      console.log('hello5');
+    }, 3000);
+    // this code executes before built-in function which is asynchronous means does not block the code
+    console.log('hello6');
+
+    // another fuction is setInterval()
+    // arguments are same as setTimeout()
+    // it executes function continuously after certain interval of time
+    let id;
+    id = setInterval(function () {
+      console.log('hello7');
+    }, 1000);
+    console.log('hello8');
+    console.log(id);
+    clearInterval(id);
+    */
+
+    [
+      'make dinner',
+      'wash dished',
+      'watch youtube'
+    ].forEach(function (value, index) {
+      console.log(index);
+      console.log(value);
+    });
+  </script>
+</body>
+
+</html>
