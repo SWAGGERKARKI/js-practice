@@ -30,6 +30,27 @@ function autoPlay() {
 
 updateScoreElement();
 
+const rockButtonElement = document.querySelector('.js-rock-button');
+rockButtonElement.addEventListener('click', () => {
+  pickGame('Rock');
+});
+document.body.addEventListener('keydown', (event) => {
+  if (event.key === 'r') {
+    pickGame('Rock');
+  }
+});
+
+const paperButtonElement = document.querySelector('.js-paper-button');
+
+paperButtonElement.addEventListener('click', () => {
+  pickGame('Paper');
+});
+
+const scissorsButtonElement = document.querySelector('.js-scissors-button');
+scissorsButtonElement.addEventListener('click', () => {
+  pickGame('Scissors');
+});
+
 function pickGame(playerMove) {
   const computerHand = pickComputerMove();
 
