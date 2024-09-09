@@ -8,6 +8,8 @@
 </head>
 
 <body>
+  <button class="js-button">Click</button>
+
   <script>
     /*
     // Function: Block of code reused throughout applications
@@ -86,6 +88,12 @@
     clearInterval(id);
     */
 
+    /*
+    // another way to apply loop through an array
+    // forEach() method
+    // it takes one argument which is anonymous funtion
+    // anonymous function has two arguments namely value and index
+    // it is preferred method over for loop
     [
       'make dinner',
       'wash dished',
@@ -94,6 +102,109 @@
       console.log(index);
       console.log(value);
     });
+    */
+
+    /*
+    // continue and break is heavily used in for loop to skip and exit the loop respectively
+    // forEach loop, we can skip by using if condition and break is complicated for forEach
+    // for using break, for loop is recommended
+    [
+      'pizza',
+      'burger',
+      'pie'
+    ].forEach(function (value, index) {
+      if (value === 'pizza') {
+        return;
+      };
+      console.log(index);
+      console.log(value);
+    });
+    */
+
+    // const regularFunction = function (param, param1) {
+    //   console.log('regular function');
+    //   console.log(param);
+    //   console.log(param1);
+    //   return 5;
+    // };
+    // regularFunction(1, 2);
+
+    // const arrowFunction = (param, param2) => {
+    //   console.log('arrow function');
+    //   return 6;
+    // };
+    // arrowFunction();
+
+    // const oneParam = param => {
+    //   console.log(param);
+    // };
+    // oneParam('one');
+
+    // const oneLine = () => 2 + 5;
+    // console.log(oneLine());
+
+    /*
+    // arrow-function
+    // short cut of regular function
+    // works as same of regular function
+    // function keyword is removed and arrow '=>' is added after small brakets
+    // it does required to stored into the varibale
+    // regular function
+    const regularFunction = function () {
+      console.log('regular function');
+    };
+    regularFunction();
+
+    const arrowFunction = () => {
+      console.log('arrow function');
+    };
+    arrowFunction();
+
+    [
+      'make dinner',
+      'wash dished',
+      'watch youtube'
+    ].forEach((value, index) => {
+      console.log(index);
+      console.log(value);
+    });
+    // other shortcuts
+    // i. for one parameter, no need to write it inside small brakets
+    // ii. for one line of code, no need to write inside curly brackets and no need of return keyword
+    const oneParam = param => {
+      console.log(param);
+    };
+    oneParam('hero');
+
+    const oneLine = () => 2 + 5;
+    console.log(oneLine());
+    */
+
+    // .addEventListener()
+    // same as onclick we use earlier
+    // but it has wide functionality
+    // it takes two arguments
+    // i. events like 'click', 'keydown' etc
+    // ii. function
+    const buttonElement = document.querySelector('.js-button');
+
+    // buttonElement.addEventListener('click', () => {
+    //   console.log('click event');
+    // });
+
+    // advantages:
+    // i. multiple event listeners for one event
+    // ii. able remove event listeners as well
+    buttonElement.addEventListener('click', () => {
+      console.log('click event two');
+    });
+
+    // to remove event listener the function needs to be stored into variable
+    const clickEvent = () => {
+      console.log('click event');
+    };
+    buttonElement.addEventListener('click', clickEvent);
+    buttonElement.removeEventListener('click', clickEvent);
   </script>
 </body>
 
